@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Text File Processor</title>
+        <link rel="shortcut icon" href="/static/favicon.ico">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            .container {
+                margin-bottom: 20px;
+                padding: 15px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+            }
+            button {
+                padding: 10px 20px;
+                margin: 5px;
+                cursor: pointer;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                border-radius: 4px;
+            }
+            button:hover {
+                background-color: #45a049;
+            }
+            #output {
+                white-space: pre-wrap;
+                word-wrap: break-word;
+            }
+        </style>
+        <script src="/static/js/main.js"></script>
+    </head>
+    <body>
+        <h1>Text File Processor</h1>
+        
+        <div class="container">
+            <h2>Upload File</h2>
+            <input type="file" id="fileInput" accept=".txt,.rtf">
+            <button onclick="uploadFile()">Upload</button>
+        </div>
+
+        <div class="container">
+            <h2>Original Text:</h2>
+            <div id="originalText"></div>
+        </div>
+
+        <div class="container">
+            <h2>Preprocessed Text:</h2>
+            <button onclick="preprocessText()">Preprocess</button>
+            <div id="processedText"></div>
+        </div>
+
+        <div class="container">
+            <h2>Transformed Text:</h2>
+            <button onclick="transformText()">Transform</button>
+            <div id="transformedText"></div>
+        </div>
+    </body>
+</html> 
